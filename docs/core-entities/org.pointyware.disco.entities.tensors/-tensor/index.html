@@ -1,0 +1,675 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Tensor</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Disco
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":core-entities/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core-entities/commonMain" data-filter=":core-entities/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Disco
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="core-entities::org.pointyware.disco.entities.tensors/Tensor///PointingToDeclaration//1547432040">
+  <div class="breadcrumbs"><a href="../../index.html">core-entities</a><span class="delimiter">/</span><a href="../index.html">org.pointyware.disco.entities.tensors</a><span class="delimiter">/</span><span class="current">Tensor</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Tensor</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Tensor</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>dimensions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int-array/index.html">IntArray</a></span></span><span class="token punctuation">)</span> : <a href="../-tensor-iterator/index.html">TensorIterator</a></div><p class="paragraph">A tensor is a generalization of vectors and matrices to higher dimensions.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-876514259%2FConstructors%2F1547432040" anchor-label="Tensor" id="-876514259%2FConstructors%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tensor.html"><span><span>Tensor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-876514259%2FConstructors%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dimensions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int-array/index.html">IntArray</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-741623862%2FClasslikes%2F1547432040" anchor-label="Companion" id="-741623862%2FClasslikes%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-741623862%2FClasslikes%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1273612982%2FProperties%2F1547432040" anchor-label="area" id="-1273612982%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="area.html"><span><span>area</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1273612982%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="area.html">area</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">The area of the foundation of the tensor, which is the accumulated size of all dimensions except the last one. This is useful for normalizing values across a tensor.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1914412851%2FProperties%2F1547432040" anchor-label="data" id="-1914412851%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="data.html"><span><span>data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1914412851%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="data.html">data</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float-array/index.html">FloatArray</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1364388490%2FProperties%2F1547432040" anchor-label="dimensions" id="1364388490%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dimensions.html"><span><span>dimensions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1364388490%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="dimensions.html">dimensions</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int-array/index.html">IntArray</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1197931221%2FProperties%2F1547432040" anchor-label="flatIndices" id="1197931221%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="flat-indices.html"><span>flat</span><wbr><span><span>Indices</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1197931221%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="flat-indices.html">flatIndices</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterator/index.html">Iterator</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="187084348%2FProperties%2F1547432040" anchor-label="indices" id="187084348%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="indices.html"><span><span>indices</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="187084348%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="indices.html">indices</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterator/index.html">Iterator</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int-array/index.html">IntArray</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">This order of indices provided by this iterator is row-major, meaning that the last index changes the fastest.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1828985408%2FProperties%2F1547432040" anchor-label="inverseIndices" id="1828985408%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="inverse-indices.html"><span>inverse</span><wbr><span><span>Indices</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1828985408%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="inverse-indices.html">inverseIndices</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterator/index.html">Iterator</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int-array/index.html">IntArray</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">An iterator that provides the indices in reverse order, which is useful for iterating over tensors in a way that the first index changes the fastest.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1051437324%2FProperties%2F1547432040" anchor-label="isMatrix" id="1051437324%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-matrix.html"><span>is</span><wbr><span><span>Matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1051437324%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="is-matrix.html">isMatrix</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="839194433%2FProperties%2F1547432040" anchor-label="isScalar" id="839194433%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-scalar.html"><span>is</span><wbr><span><span>Scalar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="839194433%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="is-scalar.html">isScalar</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="427552628%2FProperties%2F1547432040" anchor-label="isTensor" id="427552628%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-tensor.html"><span>is</span><wbr><span><span>Tensor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="427552628%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="is-tensor.html">isTensor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1840231882%2FProperties%2F1547432040" anchor-label="isVector" id="1840231882%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-vector.html"><span>is</span><wbr><span><span>Vector</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1840231882%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="is-vector.html">isVector</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="148117010%2FProperties%2F1547432040" anchor-label="lastDimensionSize" id="148117010%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-dimension-size.html"><span>last</span><wbr><span>Dimension</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="148117010%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="last-dimension-size.html">lastDimensionSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">The size of the last dimension. For scalars with empty dimensions, returns 1.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="672589301%2FProperties%2F1547432040" anchor-label="order" id="672589301%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="order.html"><span><span>order</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="672589301%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="order.html">order</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1572759089%2FProperties%2F1547432040" anchor-label="shapeString" id="1572759089%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="shape-string.html"><span>shape</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1572759089%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="shape-string.html">shapeString</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1356176194%2FProperties%2F1547432040" anchor-label="totalSize" id="-1356176194%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="total-size.html"><span>total</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1356176194%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="total-size.html">totalSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="762893269%2FProperties%2F1547432040" anchor-label="values" id="762893269%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="762893269%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="values.html">values</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterator/index.html">Iterator</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-461732000%2FFunctions%2F1547432040" anchor-label="assign" id="-461732000%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="assign.html"><span><span>assign</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-461732000%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="assign.html"><span class="token function">assign</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Tensor</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-720628189%2FFunctions%2F1547432040" anchor-label="div" id="-720628189%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="div.html"><span><span>div</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-720628189%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="div.html"><span class="token function">div</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scalar<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Performs element-wise division of this tensor by the given <a href="div.html">scalar</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2001352406%2FFunctions%2F1547432040" anchor-label="equals" id="-2001352406%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="equals.html"><span><span>equals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2001352406%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="equals.html"><span class="token function">equals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2135227325%2FFunctions%2F1547432040" anchor-label="get" id="2135227325%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2135227325%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>indices<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1346472060%2FFunctions%2F1547432040" anchor-label="hashCode" id="1346472060%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="hash-code.html"><span>hash</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1346472060%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="hash-code.html"><span class="token function">hashCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1369836036%2FFunctions%2F1547432040" anchor-label="mapEach" id="-1369836036%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="map-each.html"><span>map</span><wbr><span><span>Each</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1369836036%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">inline override </span><span class="token keyword">fun </span><a href="map-each.html"><span class="token function">mapEach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">function<span class="token operator">: </span><span class="token punctuation">(</span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Applies a function to each element of the tensor, modifying it in place.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-534747505%2FFunctions%2F1547432040" anchor-label="mapEachFlatIndexed" id="-534747505%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="map-each-flat-indexed.html"><span>map</span><wbr><span>Each</span><wbr><span>Flat</span><wbr><span><span>Indexed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-534747505%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">inline override </span><span class="token keyword">fun </span><a href="map-each-flat-indexed.html"><span class="token function">mapEachFlatIndexed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">function<span class="token operator">: </span><span class="token punctuation">(</span>index<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Applies a flat-indexed function to each element of the tensor, modifying it in place.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1129524757%2FFunctions%2F1547432040" anchor-label="mapEachIndexed" id="-1129524757%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="map-each-indexed.html"><span>map</span><wbr><span>Each</span><wbr><span><span>Indexed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1129524757%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">inline override </span><span class="token keyword">fun </span><a href="map-each-indexed.html"><span class="token function">mapEachIndexed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">function<span class="token operator">: </span><span class="token punctuation">(</span>indices<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int-array/index.html">IntArray</a><span class="token punctuation">, </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Applies an indexed function to each element of the tensor, modifying it in place.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-386569462%2FFunctions%2F1547432040" anchor-label="matrixMultiply" id="-386569462%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="matrix-multiply.html"><span>matrix</span><wbr><span><span>Multiply</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-386569462%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="matrix-multiply.html"><span class="token function">matrixMultiply</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Tensor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Performs matrix multiplication, assuming both tensors are matrices with compatible dimensions.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1432202481%2FFunctions%2F1547432040" anchor-label="max" id="1432202481%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-tensor-iterator/max.html"><span><span>max</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1432202481%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../-tensor-iterator/max.html"><span class="token function">max</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">function<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-852229709%2FFunctions%2F1547432040" anchor-label="minus" id="-852229709%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="minus.html"><span><span>minus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-852229709%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="minus.html"><span class="token function">minus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scalar<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Performs element-wise addition of this tensor by the given <a href="minus.html">scalar</a>.</p></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="minus.html"><span class="token function">minus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Tensor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1028899977%2FFunctions%2F1547432040" anchor-label="plus" id="-1028899977%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="plus.html"><span><span>plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1028899977%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scalar<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Performs element-wise addition of this tensor by the given <a href="plus.html">scalar</a>.</p></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Tensor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Adds two tensors element-wise. The tensors must have the same shape.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1148272742%2FFunctions%2F1547432040" anchor-label="plusAssign" id="1148272742%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="plus-assign.html"><span>plus</span><wbr><span><span>Assign</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1148272742%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="plus-assign.html"><span class="token function">plusAssign</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Tensor</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Performs in-place addition of this tensor by the given <a href="plus-assign.html">other</a> tensor.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="419454913%2FFunctions%2F1547432040" anchor-label="set" id="419454913%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set.html"><span><span>set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="419454913%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>indices<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2042950413%2FFunctions%2F1547432040" anchor-label="times" id="-2042950413%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="times.html"><span><span>times</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2042950413%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="times.html"><span class="token function">times</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scalar<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Performs element-wise addition of this tensor by the given <a href="times.html">scalar</a>.</p></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="times.html"><span class="token function">times</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Tensor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div><div class="brief "><p class="paragraph">Performs element-wise multiplication, .a.k.a. Hadamard product.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="759498591%2FFunctions%2F1547432040" anchor-label="timesAssign" id="759498591%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="times-assign.html"><span>times</span><wbr><span><span>Assign</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="759498591%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="times-assign.html"><span class="token function">timesAssign</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scalar<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Performs in-place element-wise multiplication of this tensor by the given <a href="times-assign.html">scalar</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1168305995%2FFunctions%2F1547432040" anchor-label="toString" id="1168305995%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1168305995%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-480030358%2FFunctions%2F1547432040" anchor-label="transpose" id="-480030358%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="transpose.html"><span><span>transpose</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-480030358%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="transpose.html"><span class="token function">transpose</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Tensor</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2058974321%2FFunctions%2F1547432040" anchor-label="zero" id="-2058974321%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="zero.html"><span><span>zero</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2058974321%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="zero.html"><span class="token function">zero</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

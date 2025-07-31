@@ -1,0 +1,525 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>org.pointyware.disco.ui</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../index.html">
+                    Disco
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":core-ui/androidMain">android</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":core-ui/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":core-ui/desktopMain">desktop</button>
+                <button class="platform-tag platform-selector native-like" data-active="" data-filter=":core-ui/iosArm64Main">iosArm64</button>
+                <button class="platform-tag platform-selector native-like" data-active="" data-filter=":core-ui/iosSimulatorArm64Main">iosSimulatorArm64</button>
+                <button class="platform-tag platform-selector native-like" data-active="" data-filter=":core-ui/iosX64Main">iosX64</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core-ui/androidMain" data-filter=":core-ui/androidMain">
+                                <span class="checkbox--icon"></span>
+                                android
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core-ui/commonMain" data-filter=":core-ui/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core-ui/desktopMain" data-filter=":core-ui/desktopMain">
+                                <span class="checkbox--icon"></span>
+                                desktop
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option native-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core-ui/iosArm64Main" data-filter=":core-ui/iosArm64Main">
+                                <span class="checkbox--icon"></span>
+                                iosArm64
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option native-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core-ui/iosSimulatorArm64Main" data-filter=":core-ui/iosSimulatorArm64Main">
+                                <span class="checkbox--icon"></span>
+                                iosSimulatorArm64
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option native-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core-ui/iosX64Main" data-filter=":core-ui/iosX64Main">
+                                <span class="checkbox--icon"></span>
+                                iosX64
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Disco
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="core-ui::org.pointyware.disco.ui////PointingToDeclaration//1514307590">
+  <div class="breadcrumbs"><a href="../index.html">core-ui</a><span class="delimiter">/</span><span class="current">org.pointyware.disco.ui</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1586725447%2FClasslikes%2F-773389701" anchor-label="ActivationFunctionIndicator" id="-1586725447%2FClasslikes%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-activation-function-indicator/index.html"><span>Activation</span><wbr><span>Function</span><wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1586725447%2FClasslikes%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-activation-function-indicator/index.html">ActivationFunctionIndicator</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-activation-function-indicator/index.html">ActivationFunctionIndicator</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1084295066%2FClasslikes%2F-773389701" anchor-label="Res" id="1084295066%2FClasslikes%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-res/index.html"><span><span>Res</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1084295066%2FClasslikes%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-res/index.html">Res</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1900315757%2FProperties%2F-773389701" anchor-label="acc_desc_back" id="-1900315757%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="acc_desc_back.html"><span>acc_</span><wbr><span>desc_</span><wbr><span>back</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1900315757%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/string/index.html">Res.string</a><span class="token punctuation">.</span><a href="acc_desc_back.html">acc_desc_back</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1628969471%2FProperties%2F-773389701" anchor-label="acc_desc_lab" id="-1628969471%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="acc_desc_lab.html"><span>acc_</span><wbr><span>desc_</span><wbr><span>lab</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1628969471%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/string/index.html">Res.string</a><span class="token punctuation">.</span><a href="acc_desc_lab.html">acc_desc_lab</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-452893809%2FProperties%2F-773389701" anchor-label="agent_24" id="-452893809%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent_24.html"><span>agent_</span><wbr><span>24</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-452893809%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/drawable/index.html">Res.drawable</a><span class="token punctuation">.</span><a href="agent_24.html">agent_24</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/DrawableResource///PointingToDeclaration/">DrawableResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-578812410%2FProperties%2F1514307590" anchor-label="allDrawableResources" id="-578812410%2FProperties%2F1514307590" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="all-drawable-resources.html"><span>all</span><wbr><span>Drawable</span><wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-578812410%2FProperties%2F1514307590"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":core-ui/androidMain" data-filterable-set=":core-ui/androidMain" data-active="" data-toggle=":core-ui/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain" data-toggle=":core-ui/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":core-ui/desktopMain" data-filterable-set=":core-ui/desktopMain" data-toggle=":core-ui/desktopMain">desktop</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosArm64Main" data-filterable-set=":core-ui/iosArm64Main" data-toggle=":core-ui/iosArm64Main">iosArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosSimulatorArm64Main" data-filterable-set=":core-ui/iosSimulatorArm64Main" data-toggle=":core-ui/iosSimulatorArm64Main">iosSimulatorArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosX64Main" data-filterable-set=":core-ui/iosX64Main" data-toggle=":core-ui/iosX64Main">iosX64</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":core-ui/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-drawable-resources.html">allDrawableResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/DrawableResource///PointingToDeclaration/">DrawableResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-drawable-resources.html">allDrawableResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/DrawableResource///PointingToDeclaration/">DrawableResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/desktopMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-drawable-resources.html">allDrawableResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/DrawableResource///PointingToDeclaration/">DrawableResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/iosArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-drawable-resources.html">allDrawableResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/DrawableResource///PointingToDeclaration/">DrawableResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosSimulatorArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-drawable-resources.html">allDrawableResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/DrawableResource///PointingToDeclaration/">DrawableResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosX64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-drawable-resources.html">allDrawableResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/DrawableResource///PointingToDeclaration/">DrawableResource</span><span class="token operator">&gt;</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1950138470%2FProperties%2F1514307590" anchor-label="allFontResources" id="1950138470%2FProperties%2F1514307590" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="all-font-resources.html"><span>all</span><wbr><span>Font</span><wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1950138470%2FProperties%2F1514307590"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":core-ui/androidMain" data-filterable-set=":core-ui/androidMain" data-active="" data-toggle=":core-ui/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain" data-toggle=":core-ui/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":core-ui/desktopMain" data-filterable-set=":core-ui/desktopMain" data-toggle=":core-ui/desktopMain">desktop</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosArm64Main" data-filterable-set=":core-ui/iosArm64Main" data-toggle=":core-ui/iosArm64Main">iosArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosSimulatorArm64Main" data-filterable-set=":core-ui/iosSimulatorArm64Main" data-toggle=":core-ui/iosSimulatorArm64Main">iosSimulatorArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosX64Main" data-filterable-set=":core-ui/iosX64Main" data-toggle=":core-ui/iosX64Main">iosX64</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":core-ui/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-font-resources.html">allFontResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/FontResource///PointingToDeclaration/">FontResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-font-resources.html">allFontResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/FontResource///PointingToDeclaration/">FontResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/desktopMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-font-resources.html">allFontResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/FontResource///PointingToDeclaration/">FontResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/iosArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-font-resources.html">allFontResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/FontResource///PointingToDeclaration/">FontResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosSimulatorArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-font-resources.html">allFontResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/FontResource///PointingToDeclaration/">FontResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosX64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-font-resources.html">allFontResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/FontResource///PointingToDeclaration/">FontResource</span><span class="token operator">&gt;</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="543048614%2FProperties%2F1514307590" anchor-label="allPluralStringResources" id="543048614%2FProperties%2F1514307590" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="all-plural-string-resources.html"><span>all</span><wbr><span>Plural</span><wbr><span>String</span><wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="543048614%2FProperties%2F1514307590"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":core-ui/androidMain" data-filterable-set=":core-ui/androidMain" data-active="" data-toggle=":core-ui/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain" data-toggle=":core-ui/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":core-ui/desktopMain" data-filterable-set=":core-ui/desktopMain" data-toggle=":core-ui/desktopMain">desktop</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosArm64Main" data-filterable-set=":core-ui/iosArm64Main" data-toggle=":core-ui/iosArm64Main">iosArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosSimulatorArm64Main" data-filterable-set=":core-ui/iosSimulatorArm64Main" data-toggle=":core-ui/iosSimulatorArm64Main">iosSimulatorArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosX64Main" data-filterable-set=":core-ui/iosX64Main" data-toggle=":core-ui/iosX64Main">iosX64</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":core-ui/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-plural-string-resources.html">allPluralStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/PluralStringResource///PointingToDeclaration/">PluralStringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-plural-string-resources.html">allPluralStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/PluralStringResource///PointingToDeclaration/">PluralStringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/desktopMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-plural-string-resources.html">allPluralStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/PluralStringResource///PointingToDeclaration/">PluralStringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/iosArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-plural-string-resources.html">allPluralStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/PluralStringResource///PointingToDeclaration/">PluralStringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosSimulatorArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-plural-string-resources.html">allPluralStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/PluralStringResource///PointingToDeclaration/">PluralStringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosX64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-plural-string-resources.html">allPluralStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/PluralStringResource///PointingToDeclaration/">PluralStringResource</span><span class="token operator">&gt;</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="910012664%2FProperties%2F1514307590" anchor-label="allStringArrayResources" id="910012664%2FProperties%2F1514307590" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="all-string-array-resources.html"><span>all</span><wbr><span>String</span><wbr><span>Array</span><wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="910012664%2FProperties%2F1514307590"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":core-ui/androidMain" data-filterable-set=":core-ui/androidMain" data-active="" data-toggle=":core-ui/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain" data-toggle=":core-ui/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":core-ui/desktopMain" data-filterable-set=":core-ui/desktopMain" data-toggle=":core-ui/desktopMain">desktop</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosArm64Main" data-filterable-set=":core-ui/iosArm64Main" data-toggle=":core-ui/iosArm64Main">iosArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosSimulatorArm64Main" data-filterable-set=":core-ui/iosSimulatorArm64Main" data-toggle=":core-ui/iosSimulatorArm64Main">iosSimulatorArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosX64Main" data-filterable-set=":core-ui/iosX64Main" data-toggle=":core-ui/iosX64Main">iosX64</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":core-ui/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-string-array-resources.html">allStringArrayResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringArrayResource///PointingToDeclaration/">StringArrayResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-string-array-resources.html">allStringArrayResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringArrayResource///PointingToDeclaration/">StringArrayResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/desktopMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-string-array-resources.html">allStringArrayResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringArrayResource///PointingToDeclaration/">StringArrayResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/iosArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-string-array-resources.html">allStringArrayResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringArrayResource///PointingToDeclaration/">StringArrayResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosSimulatorArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-string-array-resources.html">allStringArrayResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringArrayResource///PointingToDeclaration/">StringArrayResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosX64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-string-array-resources.html">allStringArrayResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringArrayResource///PointingToDeclaration/">StringArrayResource</span><span class="token operator">&gt;</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1422813350%2FProperties%2F1514307590" anchor-label="allStringResources" id="1422813350%2FProperties%2F1514307590" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain" data-filterable-set=":core-ui/iosArm64Main,:core-ui/iosSimulatorArm64Main,:core-ui/iosX64Main,:core-ui/commonMain,:core-ui/androidMain,:core-ui/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="all-string-resources.html"><span>all</span><wbr><span>String</span><wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1422813350%2FProperties%2F1514307590"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":core-ui/androidMain" data-filterable-set=":core-ui/androidMain" data-active="" data-toggle=":core-ui/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain" data-toggle=":core-ui/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":core-ui/desktopMain" data-filterable-set=":core-ui/desktopMain" data-toggle=":core-ui/desktopMain">desktop</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosArm64Main" data-filterable-set=":core-ui/iosArm64Main" data-toggle=":core-ui/iosArm64Main">iosArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosSimulatorArm64Main" data-filterable-set=":core-ui/iosSimulatorArm64Main" data-toggle=":core-ui/iosSimulatorArm64Main">iosSimulatorArm64</button><button class="platform-bookmark" data-filterable-current=":core-ui/iosX64Main" data-filterable-set=":core-ui/iosX64Main" data-toggle=":core-ui/iosX64Main">iosX64</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":core-ui/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-string-resources.html">allStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-string-resources.html">allStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/desktopMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-res/index.html">Res</a><span class="token punctuation">.</span><a href="all-string-resources.html">allStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/iosArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-string-resources.html">allStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosSimulatorArm64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-string-resources.html">allStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":core-ui/iosX64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="all-string-resources.html">allStringResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span><span class="token operator">&gt;</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1054448447%2FProperties%2F-773389701" anchor-label="description_relu" id="1054448447%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="description_relu.html"><span>description_</span><wbr><span>relu</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1054448447%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/string/index.html">Res.string</a><span class="token punctuation">.</span><a href="description_relu.html">description_relu</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1020131551%2FProperties%2F-773389701" anchor-label="description_sigmoid" id="1020131551%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="description_sigmoid.html"><span>description_</span><wbr><span>sigmoid</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1020131551%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/string/index.html">Res.string</a><span class="token punctuation">.</span><a href="description_sigmoid.html">description_sigmoid</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1338876343%2FProperties%2F-773389701" anchor-label="label_relu" id="1338876343%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="label_relu.html"><span>label_</span><wbr><span>relu</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1338876343%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/string/index.html">Res.string</a><span class="token punctuation">.</span><a href="label_relu.html">label_relu</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="441106279%2FProperties%2F-773389701" anchor-label="label_sigmoid" id="441106279%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="label_sigmoid.html"><span>label_</span><wbr><span>sigmoid</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="441106279%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/string/index.html">Res.string</a><span class="token punctuation">.</span><a href="label_sigmoid.html">label_sigmoid</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-969028876%2FProperties%2F-773389701" anchor-label="services_24" id="-969028876%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="services_24.html"><span>services_</span><wbr><span>24</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-969028876%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/drawable/index.html">Res.drawable</a><span class="token punctuation">.</span><a href="services_24.html">services_24</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/DrawableResource///PointingToDeclaration/">DrawableResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1904215184%2FProperties%2F-773389701" anchor-label="title_app" id="1904215184%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="title_app.html"><span>title_</span><wbr><span>app</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1904215184%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/string/index.html">Res.string</a><span class="token punctuation">.</span><a href="title_app.html">title_app</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-524831627%2FProperties%2F-773389701" anchor-label="title_destination_lab" id="-524831627%2FProperties%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="title_destination_lab.html"><span>title_</span><wbr><span>destination_</span><wbr><span>lab</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-524831627%2FProperties%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-res/string/index.html">Res.string</a><span class="token punctuation">.</span><a href="title_destination_lab.html">title_destination_lab</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.compose.resources/StringResource///PointingToDeclaration/">StringResource</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-351323229%2FFunctions%2F-773389701" anchor-label="ActivationFunctionIndicatorView" id="-351323229%2FFunctions%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-activation-function-indicator-view.html"><span>Activation</span><wbr><span>Function</span><wbr><span>Indicator</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-351323229%2FFunctions%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="-activation-function-indicator-view.html"><span class="token function">ActivationFunctionIndicatorView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="../../core-entities/org.pointyware.disco.entities.activations/-activation-function/index.html">ActivationFunction</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-889510405%2FFunctions%2F-773389701" anchor-label="LayerView" id="-889510405%2FFunctions%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-layer-view.html"><span>Layer</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-889510405%2FFunctions%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="-layer-view.html"><span class="token function">LayerView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">state<span class="token operator">: </span><a href="../../core-viewmodels/org.pointyware.disco.viewmodels/-layer-ui-state/index.html">LayerUiState</a><span class="token punctuation">, </span></span><span class="parameter ">modifier<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier.html">Modifier</a><span class="token operator"> = </span>Modifier</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Displays a single linear layer of a neural network. Neurons are displayed from left to right, with the input on the top and the output on the bottom.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="419011239%2FFunctions%2F-773389701" anchor-label="LazyNeuralNetworkView" id="419011239%2FFunctions%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-lazy-neural-network-view.html"><span>Lazy</span><wbr><span>Neural</span><wbr><span>Network</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="419011239%2FFunctions%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="-lazy-neural-network-view.html"><span class="token function">LazyNeuralNetworkView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">state<span class="token operator">: </span><a href="../../core-viewmodels/org.pointyware.disco.viewmodels/-neural-network-ui-state/index.html">NeuralNetworkUiState</a><span class="token punctuation">, </span></span><span class="parameter ">modifier<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier.html">Modifier</a><span class="token operator"> = </span>Modifier</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-413168709%2FFunctions%2F-773389701" anchor-label="NeuralNetworkView" id="-413168709%2FFunctions%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-neural-network-view.html"><span>Neural</span><wbr><span>Network</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-413168709%2FFunctions%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="-neural-network-view.html"><span class="token function">NeuralNetworkView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">state<span class="token operator">: </span><a href="../../core-viewmodels/org.pointyware.disco.viewmodels/-neural-network-ui-state/index.html">NeuralNetworkUiState</a><span class="token punctuation">, </span></span><span class="parameter ">modifier<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier.html">Modifier</a><span class="token operator"> = </span>Modifier</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Displays a sequential linear neural network. The view is oriented with the input layer on the top and the output layer on the bottom.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1935814062%2FFunctions%2F-773389701" anchor-label="NeuronView" id="1935814062%2FFunctions%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-neuron-view.html"><span>Neuron</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1935814062%2FFunctions%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="-neuron-view.html"><span class="token function">NeuronView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">weights<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">bias<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">modifier<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier.html">Modifier</a><span class="token operator"> = </span>Modifier<span class="token punctuation">, </span></span><span class="parameter ">squareSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">20.0f</span><span class="token punctuation">, </span></span><span class="parameter ">biasGap<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">2.0f</span><span class="token punctuation">, </span></span><span class="parameter ">colorMap<span class="token operator">: </span><a href="../../core-viewmodels/org.pointyware.disco.viewmodels/-color-map/index.html">ColorMap</a><span class="token operator"> = </span>DefaultColorMap</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Displays a single neuron in a neural network layer. The neuron is represented by its weights and bias rendered as colored squares.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="962262156%2FFunctions%2F-773389701" anchor-label="rememberViewModel" id="962262156%2FFunctions%2F-773389701" data-filterable-set=":core-ui/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-ui/commonMain" data-filterable-set=":core-ui/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remember-view-model.html"><span>remember</span><wbr><span>View</span><wbr><span><span>Model</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="962262156%2FFunctions%2F-773389701"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-ui/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="remember-view-model.html">T</a><span class="token operator"> : </span><a href="https://developer.android.com/reference/kotlin/androidx/lifecycle/ViewModel.html">ViewModel</a><span class="token operator">&gt; </span><a href="remember-view-model.html"><span class="token function">rememberViewModel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="remember-view-model.html">T</a></div><div class="brief "><p class="paragraph">A convenience function to get a ViewModel across platforms. Subsequent invocations will return the same instance through <a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/package-summary.html">remember</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

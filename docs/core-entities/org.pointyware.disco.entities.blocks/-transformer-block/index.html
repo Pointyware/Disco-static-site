@@ -1,0 +1,210 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>TransformerBlock</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Disco
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":core-entities/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core-entities/commonMain" data-filter=":core-entities/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Disco
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="core-entities::org.pointyware.disco.entities.blocks/TransformerBlock///PointingToDeclaration//1547432040">
+  <div class="breadcrumbs"><a href="../../index.html">core-entities</a><span class="delimiter">/</span><a href="../index.html">org.pointyware.disco.entities.blocks</a><span class="delimiter">/</span><span class="current">TransformerBlock</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Transformer</span><wbr><span><span>Block</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">TransformerBlock</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stackCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span> : <a href="../-block/index.html">Block</a></div><p class="paragraph">Based on the original paper: "Attention Is All You Need" https://arxiv.org/pdf/1706.03762</p><p class="paragraph">The original transformer is composed of the following units, where StackCount = 6:</p><ul><li><p class="paragraph">Positional Encoding Summed with Input Embedding = I</p></li><li><p class="paragraph">Encoder x StackCount = E_o</p></li><li><p class="paragraph">Multi-Head Attention = MHA_e</p></li><li><p class="paragraph">SumLayer (I, MHA_e) + Norm = N_e1</p></li><li><p class="paragraph">Feed Forward = FF_e</p></li><ul><li><p class="paragraph">DenseLayer + ReLU</p></li><li><p class="paragraph">DenseLayer</p></li></ul><li><p class="paragraph">SumLayer (N_e1 + FF_e) + Norm</p></li><li><p class="paragraph">Positional Encoding Summed with Output Embedding = O</p></li><li><p class="paragraph">Decoder x StackCount</p></li><li><p class="paragraph">Masked Multi-Head Attention (O, O, O) = MMHA</p></li><li><p class="paragraph">SumLayer (MMHA + O) + Norm = N_d1</p></li><li><p class="paragraph">Multi-Head Attention (E_o, E_o, N) = MHA_d</p></li><li><p class="paragraph">SumLayer (N_d1, MHA_d) + Norm = N_d2</p></li><li><p class="paragraph">Feed Forward = FF_d</p></li><ul><li><p class="paragraph">DenseLayer + ReLU</p></li><li><p class="paragraph">DenseLayer</p></li></ul><li><p class="paragraph">SumLayer (N_d2, FF_d) + Norm = N_d3</p></li><li><p class="paragraph">Linear Layer</p></li><li><p class="paragraph">Softmax Layer</p></li></ul><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-scaled-dot-product-attention/index.html"><span>Scaled</span><wbr><span>Dot</span><wbr><span>Product</span><wbr><span><span>Attention</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-multi-head-attention/index.html"><span>Multi</span><wbr><span>Head</span><wbr><span><span>Attention</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="184430266%2FConstructors%2F1547432040" anchor-label="TransformerBlock" id="184430266%2FConstructors%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-transformer-block.html"><span>Transformer</span><wbr><span><span>Block</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="184430266%2FConstructors%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stackCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-272506823%2FClasslikes%2F1547432040" anchor-label="Decoder" id="-272506823%2FClasslikes%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-decoder/index.html"><span><span>Decoder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-272506823%2FClasslikes%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">inner </span><span class="token keyword">class </span><a href="-decoder/index.html">Decoder</a> : <a href="../-block/index.html">Block</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="874588769%2FClasslikes%2F1547432040" anchor-label="Encoder" id="874588769%2FClasslikes%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-encoder/index.html"><span><span>Encoder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="874588769%2FClasslikes%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">inner </span><span class="token keyword">class </span><a href="-encoder/index.html">Encoder</a> : <a href="../-block/index.html">Block</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1067098806%2FProperties%2F1547432040" anchor-label="parameterCount" id="-1067098806%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="parameter-count.html"><span>parameter</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1067098806%2FProperties%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="parameter-count.html">parameterCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1272751621%2FFunctions%2F1547432040" anchor-label="calculate" id="-1272751621%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="calculate.html"><span><span>calculate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1272751621%2FFunctions%2F1547432040"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="calculate.html"><span class="token function">calculate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">input<span class="token operator">: </span><a href="../../org.pointyware.disco.entities.tensors/-tensor/index.html">Tensor</a><span class="token punctuation">, </span></span><span class="parameter ">shiftedOutputs<span class="token operator">: </span><a href="../../org.pointyware.disco.entities.tensors/-tensor/index.html">Tensor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../org.pointyware.disco.entities.tensors/-tensor/index.html">Tensor</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
