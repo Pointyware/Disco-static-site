@@ -23,6 +23,7 @@ org.pointyware.disco.entities.activations
 org.pointyware.disco.entities.blocks
 org.pointyware.disco.entities.layers
 org.pointyware.disco.entities.loss
+org.pointyware.disco.entities.math
 org.pointyware.disco.entities.networks
 org.pointyware.disco.entities.regularizers
 org.pointyware.disco.entities.signals
