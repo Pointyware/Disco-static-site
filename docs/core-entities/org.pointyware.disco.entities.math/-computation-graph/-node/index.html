@@ -94,30 +94,11 @@
   <div class="breadcrumbs"><a href="../../../index.html">core-entities</a><span class="delimiter">/</span><a href="../../index.html">org.pointyware.disco.entities.math</a><span class="delimiter">/</span><a href="../index.html">ComputationGraph</a><span class="delimiter">/</span><span class="current">Node</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Node</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">Node</a><span class="token operator">&lt;</span><a href="index.html">O</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>inputs<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../-computation-key/index.html">ComputationKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>output<span class="token operator">: </span><a href="../../-computation-key/index.html">ComputationKey</a><span class="token operator">&lt;</span><a href="index.html">O</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><p class="paragraph">A computation node represents an operation in the computation graph.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Node</a></div><p class="paragraph">A computation node represents an operation in the computation graph.</p><p class="paragraph">Nodes can have multiple inputs and many outputs. Edges are represented as adjacency lists on each node: <a href="inputs.html">inputs</a> and outputEdges.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../org.pointyware.disco.entities.layers/-dense-layer/-node/index.html">Node</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../org.pointyware.disco.entities.layers/-sum-layer/-sum-node/index.html">SumNode</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../-addition-node/index.html">AdditionNode</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <div data-togglable="CONSTRUCTOR">
-        <h2 class="">Constructors</h2>
-        <div class="table"><a data-name="-1112729913%2FConstructors%2F1547432040" anchor-label="Node" id="-1112729913%2FConstructors%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
-          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="-node.html"><span><span>Node</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1112729913%2FConstructors%2F1547432040"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">inputs<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../-computation-key/index.html">ComputationKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">output<span class="token operator">: </span><a href="../../-computation-key/index.html">ComputationKey</a><span class="token operator">&lt;</span><a href="index.html">O</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div data-togglable="PROPERTY">
         <h2 class="">Properties</h2>
         <div class="table"><a data-name="49799042%2FProperties%2F1547432040" anchor-label="inputs" id="49799042%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
@@ -130,22 +111,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="inputs.html">inputs</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../-computation-key/index.html">ComputationKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="inputs.html">inputs</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../-computation-key/index.html">ComputationKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Values that this node depends on to compute its output(s).</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1317399702%2FProperties%2F1547432040" anchor-label="output" id="-1317399702%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+<a data-name="-618430307%2FProperties%2F1547432040" anchor-label="outputs" id="-618430307%2FProperties%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
           <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="output.html"><span><span>output</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1317399702%2FProperties%2F1547432040"></span>
+                  <div><a href="outputs.html"><span><span>outputs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-618430307%2FProperties%2F1547432040"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="output.html">output</a><span class="token operator">: </span><a href="../../-computation-key/index.html">ComputationKey</a><span class="token operator">&lt;</span><a href="index.html">O</a><span class="token operator">&gt;</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="outputs.html">outputs</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="../../-computation-key/index.html">ComputationKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Values that this node produces as output.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -154,32 +135,17 @@
       </div>
       <div data-togglable="FUNCTION">
         <h2 class="">Functions</h2>
-        <div class="table"><a data-name="-590310504%2FFunctions%2F1547432040" anchor-label="compute" id="-590310504%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
+        <div class="table"><a data-name="906460311%2FFunctions%2F1547432040" anchor-label="compute" id="906460311%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
           <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="compute.html"><span><span>compute</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-590310504%2FFunctions%2F1547432040"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="906460311%2FFunctions%2F1547432040"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="compute.html"><span class="token function">compute</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">O</a></div><div class="brief "><p class="paragraph">Computes the output value of the node in terms of its inputs.</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="-268050780%2FFunctions%2F1547432040" anchor-label="derivative" id="-268050780%2FFunctions%2F1547432040" data-filterable-set=":core-entities/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core-entities/commonMain" data-filterable-set=":core-entities/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="derivative.html"><span><span>derivative</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-268050780%2FFunctions%2F1547432040"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="derivative.html"><span class="token function">derivative</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">O</a></div><div class="brief "><p class="paragraph">Computes the derivative of the output value of the node in terms of its inputs.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core-entities/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="compute.html"><span class="token function">compute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../../-computation-context/index.html">ComputationContext</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Computes the output value of the node in terms of its inputs.</p></div></div></div>
                 </div>
               </div>
             </div>
